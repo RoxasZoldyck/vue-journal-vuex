@@ -13,6 +13,11 @@ export default {
             path: ':id',
             name: 'entry',
             component: () => import(/* webpackChunkName: "daybook-no-entry" */ '@/modules/daybook/views/EntryView.vue'),
+            props: (route) => {
+                return {
+                    id: route.params.id //Aquí estamos enviando al props de EntryViews el id:route.params.id, que es el id que se encontró en el URL
+                }
+            }
         }
     ]
 }

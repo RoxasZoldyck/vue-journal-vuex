@@ -1,7 +1,9 @@
 <template>
-  <button class="btn btn-primary">
+  <button class="btn btn-primary"
+  @click="$emit('on:click');">
     <i class="fa fa-2x"
-    :class="icon"></i> <!--El :class hará un append para que se agreguen más clases, pero no se pueden usar dos :class, si un class y :class-->
+    :class="icon"
+    ></i> <!--El :class hará un append para que se agreguen más clases, pero no se pueden usar dos :class, sí un class y :class. Nota 2: El $emit('on:click') emite un click en la función llamada on:click del componente Fab-->
   </button>
 </template>
 
@@ -10,6 +12,7 @@
 //fa plus ejercicio, hacer que el icono por defecto sea fa-plus, y sino que se ponga el que se mande
 
 export default {
+  emits:[],
   props:{
     icon:{
       type: String,
@@ -20,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//Hacemos que el botón para agregar entradas quede fijado
+//Hacemos que el botón para agregar entradas quede fijo
 button{
     border-radius: 100%;
     bottom: 20px;
