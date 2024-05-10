@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el EntryView debe de mostrar la entrada correctamente 1`] = `
+<div class="entry-title d-flex justify-content-between p-2">
+  <div><span class="text-success fs-3 fw-bold">7</span><span class="mx-1 fs-3">Mayo</span><span class="mx-2 fs-4 fw-light">2024, Martes</span></div>
+  <!--El botón de borrar sólo se mostrará si hay una entrada, validamos con entry.id-->
+  <div><input type="file" accept="image/png, image/jpeg" style="display: none;">
+    <!--Este input no aparecerá, pero con la ref lo utilizaremos cuando se presiona el botón de subir foto--><button class="btn btn-danger mx-2"> Borrar <i class="fa fa-trash-alt"></i></button><button class="btn btn-primary">
+      <!--Con esta función buscaremos la referencia del input--> Subir foto <i class="fa fa-upload"></i>
+    </button>
+  </div>
+</div>
+<!-- Esto es exclusivo de vue 3, llamar otro root element -->
+<hr>
+<div class="d-flex flex-column px-3 h-75"><textarea placeholder="¿Qué sucedió hoy?"></textarea></div>
+<fab-stub icon="fa-save"></fab-stub>
+<!--El icon se está enviando como prop al Fab, indicando así que cambie el icono del botón Fab-->
+<img src="https://res.cloudinary.com/dqkcsldfl/image/upload/v1715083085/t2inytxfmokfuojkl5pu.jpg" alt="entry-picture" class="img-thumbnail">
+<!--v-if-->
+`;

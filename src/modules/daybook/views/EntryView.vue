@@ -139,7 +139,7 @@ export default {
         ...mapActions('journalModule', ['updateEntry','createEntry','deleteEntry']),
         async saveEntry(){
             //Creamos una alerta de espera en lo que se guarda una entrada
-            new Swal({
+            Swal.fire({
                 title:'Espere por favor',
                 allowOutsideClick: false
             })
@@ -182,7 +182,7 @@ export default {
 
             if (isConfirmed){ //isConfirmed es un bool que devuelve await Swal.fire cuando se presiona que sí se desea borrar
                 //Mostramos alerta de espera
-                new Swal({
+                Swal.fire({
                     title:'Espere por favor',
                     allowOutsideClick: false
                 })
